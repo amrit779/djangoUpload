@@ -1,0 +1,52 @@
+<head>
+    {% load static %}
+    <title>Import csv file with jquery</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link href="{% static "upload/css/customUpload.css" %}" rel="stylesheet">
+</head>
+
+<body>
+    <div class="row h-100">
+        <div class="col-sm-12 my-auto">
+
+            <div class="container mt-3">
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="input-group">
+                        <div class="col-md-6">
+                            <input type="file" class="custom-file-input" id="inputfile" name="inputfile">
+                            <label class="custom-file-label" for="inputfile">Choose file</label>
+                        </div>
+                        <div class="col-md-3">
+                            <input class="btn btn-primary" type="button" id="uploadfile" value="Import File" />
+                        </div>
+                        <div class="col-md-3">
+                            <input class="btn btn-primary" type="button" id="viewfile" value="View file" />
+                        </div>
+                    </div>
+                    <br>
+                    <div class="input-group">
+                        <div class="col-md-6">
+                            <a href="#" id="warning" class="badge badge-danger"></a>
+                        </div>
+                        <div class="col-md-3">
+                        </div>
+                        <div class="col-md-3">
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <script src="{% static "upload/js/customUpload.js" %}"></script>
+</body>
