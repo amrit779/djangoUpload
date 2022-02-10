@@ -1,4 +1,4 @@
-django==2.2.20
+django==2.2.27
 django-db-logger==0.1.7
 djangorestframework==3.11.2
 json5==0.8.5
